@@ -1,9 +1,9 @@
 <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
-  <attribute name="title" type="string" value="ASGS NCFS Sandy Advisory 31"/>
+  <attribute name="title" type="string" value="ASGS NCFS Gonzalo Advisory 24"/>
   <attribute name="Conventions" value="CF-1.6, UGRID-0.9" />
-  <attribute name="id" value="UND_ADCIRC.ASGS.NCFS.Sandy.31" />
+  <attribute name="id" value="RENCI_ADCIRC.ASGS.NCFS.Gonzalo.24" />
   <attribute name="cdm_data_type" value="ugrid" />
-  <attribute name="summary" value="The ADCIRC Surge Guidance System Forecast for Hurricane Sandy (2012) Advisory 31 on the nc6b mesh." />
+  <attribute name="summary" value="The ADCIRC Surge Guidance System Forecast for Hurricane Gonzalo (2014) Advisory 24." />
   
   <variable name="adcirc_mesh" shape="mesh" type="int">
     <attribute name="long_name" value="mesh_topology" />
@@ -19,13 +19,34 @@
       <attribute name="cf_role" value="face_node_connectivity" />
     </variable>
 
-<!--  Brian: Try this out:
+
   <aggregation type="union">
-    <scan location="." regExp=".*\.nc$" subdirs="false"/>        
+    <!--scan location="." regExp=".*\.nc$" subdirs="false"/-->        
+    <netcdf location="fort.63.nc"/>
+    <!-- netcdf location="fort.64.nc"/-->
+    <netcdf location="fort.73.nc"/>
+    <netcdf location="fort.74.nc"/>
+    <netcdf location="maxwvel.63.nc"/>
+    <netcdf location="swan_DIR_max.63.nc"/>
+    <netcdf location="swan_TMM10.63.nc"/>
+    <netcdf location="swan_TPS_max.63.nc"/>
+    <netcdf location="maxele.63.nc"/>
+    <netcdf location="minpr.63.nc"/>
+    <netcdf location="swan_HS.63.nc"/>
+    <netcdf location="swan_TMM10_max.63.nc"/>
+    <netcdf location="fort.68.nc"/>
+    <netcdf location="maxrs.63.nc"/>
+    <netcdf location="swan_DIR.63.nc"/>
+    <netcdf location="swan_HS_max.63.nc"/>
+    <netcdf location="swan_TPS.63.nc"/>
   </aggregation>
--->
-  <aggregation type="union">    
+
+
+  <!-- aggregation type="union">    
     <netcdf location="http://opendap.renci.org:1935/thredds/dodsC/ASGS/sandy/31/nc6b/blueridge.renci.org/ncfs/nhcConsensus/fort.63.nc"/>
     <netcdf location="http://opendap.renci.org:1935/thredds/dodsC/ASGS/sandy/31/nc6b/blueridge.renci.org/ncfs/nhcConsensus/swan_TPS.63.nc"/>
   </aggregation> 
+-->
+
 </netcdf>
+
