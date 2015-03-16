@@ -1,2 +1,2 @@
-# uaf
-Unified Access Framework:  an effort to identify high priority datasets to enable as CF-compliant, aggregated data, along with ISO metadata that include WMS, OPeNDAP, WCS and ISO metadata services. 
+# kennedy
+kennedy:  a repo to enable the launch of datasets into the IOOS cyberspace and beyond
