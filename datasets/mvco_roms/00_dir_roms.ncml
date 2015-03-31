@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+    <aggregation dimName="ocean_time" type="joinExisting">
+        <scan location="." regExp=".*his_case7_ar0fd_[0-9]{4}\.nc$" subdirs="false"/>
+    </aggregation>
+
+    <attribute name="title" type="String" value="ROMS3.0 CBLAST2007 Ripples with SWAN-40m res"/>
+    <attribute name="summary" type="String"
+        value="ROMS3.0 CBLAST2007 Ripples with SWAN-40m res.  Add some extra information here."/>
+    <attribute name="id" type="String" value="MVCO:Spatial_7_ar0fd"/>
+    <attribute name="Conventions" type="String" value="CF-1.4, SGRID-0.1"/>
+    <attribute name="cdm_data_type" type="String" value="Grid"/>
+    <attribute name="naming_authority" type="String" value="org.nanoos"/>
+    <attribute name="Metadata_Conventions" type="String"
+        value="Unidata Dataset Discovery v1.0, CF-1.4"/>
+
+    <attribute name="keywords" type="String"
+        value="Oceans; Ocean Temperature; Potential Temperature, Oceans; Salinity/Density; Salinity, Oceans; Sea Surface Topography; Sea Surface Height, Oceans; Ocean Circulation; Ocean Currents"/>
+    <attribute name="keywords_vocabulary" type="String" value="GCMD Science Keywords"/>
+    <attribute name="standard_name_vocabulary" type="String" value="CF-1.4"/>
+    <attribute name="comment" type="String"
+        value="Model runs produced by Dr. Neil Ganju (nganju@usgs.gov)."/>
+    <attribute name="creator_email" type="String" value="nganju@usgs.gov"/>
+    <attribute name="creator_name" type="String" value="Neil Ganju"/>
+    <attribute name="creator_url" type="String" value="http://water.usgs.gov/fluxes"/>
+    <attribute name="institution" type="String" value="USGS Coastal and Marine Geology Program"/>
+    <attribute name="project" type="String" value="CMG_Portal"/>
+    <attribute name="contributor_name" type="String" value="Neil Ganju"/>
+    <attribute name="contributor_role" type="String" value="distributor"/>
+    <attribute name="publisher_email" type="String" value="nganju@usgs.gov"/>
+    <attribute name="publisher_name" type="String" value="USGS Coastal and Marine Geology Program "/>
+    <attribute name="publisher_url" type="String" value="http://marine.usgs.gov"/>
+    <attribute name="license" type="String"
+        value="The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies. Neither the data Contributor, nor the United States Government, nor any of their employees or contractors, makes any warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, or assumes any legal liability for the accuracy, completeness, or usefulness, of this information."/>
+    <attribute name="acknowledgment" type="String"
+        value="Funding from USGS Coastal and Marine Program, additional funding from ... "/>
+    <attribute name="source" type="String"
+        value="Regional Ocean Modeling System (ROMS), http://myroms.org"/>
+    <attribute name="references" type="String" value="http://myroms.org"/>
+
+    <variable name="h">
+        <attribute name="standard_name" type="String" value="sea_floor_depth"/>
+    </variable>
+    <variable name="temp">
+        <attribute name="_FillValue" type="float" value="0.0"/>
+        <attribute name="standard_name" type="String" value="sea_water_potential_temperature"/>
+    </variable>
+    <variable name="salt">
+        <attribute name="standard_name" type="String" value="sea_water_salinity"/>
+        <attribute name="units" type="String" value="0.001"/>
+        <attribute name="_FillValue" type="float" value="0.0"/>
+    </variable>
+    <variable name="Hwave">
+        <attribute name="_FillValue" type="float" value="0.0"/>
+        <attribute name="standard_name" type="String" value="sea_surface_wave_significant_height"/>
+    </variable>
+    <variable name="u">
+        <attribute name="standard_name" type="String" value="x_sea_water_velocity"/>
+        <attribute name="_FillValue" type="float" value="0.0"/>
+        <attribute name="grid" value="grid"/>
+        <attribute name="location" value="edge1"/>
+    </variable>
+    <variable name="v">
+        <attribute name="standard_name" type="String" value="y_sea_water_velocity"/>
+        <attribute name="_FillValue" type="float" value="0.0"/>
+        <attribute name="grid" value="grid"/>
+        <attribute name="location" value="edge2"/>
+    </variable>
+    <variable name="ubar">
+        <attribute name="standard_name" type="String" value="barotropic_x_sea_water_velocity"/>
+        <attribute name="_FillValue" type="float" value="0.0"/>
+        <attribute name="grid" value="grid"/>
+        <attribute name="location" value="edge1"/>
+    </variable>
+    <variable name="vbar">
+        <attribute name="standard_name" type="String" value="barotropic_y_sea_water_velocity"/>
+        <attribute name="_FillValue" type="float" value="0.0"/>
+        <attribute name="grid" value="grid"/>
+        <attribute name="location" value="edge2"/>
+    </variable>
+    <variable name="zeta">
+        <attribute name="standard_name" type="String"
+            value="water_surface_height_above_reference_datum"/>
+        <attribute name="_FillValue" type="float" value="0.0"/>
+        <attribute name="grid" value="grid"/>
+        <attribute name="location" value="face"/>
+    </variable>
+    <variable name="grid" type="int">
+        <attribute name="cf_role" value="grid_topology"/>
+        <attribute name="topology_dimension" type="int" value="2"/>
+        <attribute name="node_dimensions" value="xi_psi eta_psi"/>
+        <attribute name="face_dimensions"
+            value="xi_rho: xi_psi (padding: both) eta_rho: eta_psi (padding: both)"/>
+        <attribute name="edge1_dimensions" value="xi_u: xi_psi eta_u: eta_psi (padding: both)"/>
+        <attribute name="edge2_dimensions" value="xi_v: xi_psi (padding: both) eta_v: eta_psi"/>
+        <attribute name="node_coordinates" value="lon_psi lat_psi"/>
+        <attribute name="face_coordinates" value="lon_rho lat_rho"/>
+        <attribute name="edge1_coordinates" value="lon_u lat_u"/>
+        <attribute name="edge2_coordinates" value="lon_v lat_v"/>
+        <attribute name="vertical_dimensions" value="s_rho: s_w (padding: none)"/>
+    </variable>
+</netcdf>
