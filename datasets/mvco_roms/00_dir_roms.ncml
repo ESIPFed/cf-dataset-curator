@@ -7,17 +7,15 @@
     <attribute name="title" type="String" value="ROMS3.0 CBLAST2007 Ripples with SWAN-40m res"/>
     <attribute name="summary" type="String"
         value="ROMS3.0 CBLAST2007 Ripples with SWAN-40m res.  Add some extra information here."/>
-    <attribute name="id" type="String" value="MVCO:Spatial_7_ar0fd"/>
-    <attribute name="Conventions" type="String" value="CF-1.4, SGRID-0.1"/>
+    <attribute name="id" type="String" value="USGS_COAWST_MVCO_CBLAST_Ripples_SWAN_40m"/>
+    <attribute name="Conventions" type="String" value="CF-1.6, SGRID-0.1, ACDD-1.3"/>
     <attribute name="cdm_data_type" type="String" value="Grid"/>
-    <attribute name="naming_authority" type="String" value="org.nanoos"/>
-    <attribute name="Metadata_Conventions" type="String"
-        value="Unidata Dataset Discovery v1.0, CF-1.4"/>
+    <attribute name="naming_authority" type="String" value="gov.usgs.cmgp.wh"/>
 
     <attribute name="keywords" type="String"
         value="Oceans; Ocean Temperature; Potential Temperature, Oceans; Salinity/Density; Salinity, Oceans; Sea Surface Topography; Sea Surface Height, Oceans; Ocean Circulation; Ocean Currents"/>
     <attribute name="keywords_vocabulary" type="String" value="GCMD Science Keywords"/>
-    <attribute name="standard_name_vocabulary" type="String" value="CF-1.4"/>
+    <attribute name="standard_name_vocabulary" type="String" value="CF-1.6"/>
     <attribute name="comment" type="String"
         value="Model runs produced by Dr. Neil Ganju (nganju@usgs.gov)."/>
     <attribute name="creator_email" type="String" value="nganju@usgs.gov"/>
@@ -40,43 +38,57 @@
 
     <variable name="h">
         <attribute name="standard_name" type="String" value="sea_floor_depth"/>
+        <attribute name="grid" value="grid"/>
+        <attribute name="location" value="face"/>
+        <attribute name="content_coverage_type" value="modelResult"/>
     </variable>
     <variable name="temp">
         <attribute name="_FillValue" type="float" value="0.0"/>
         <attribute name="standard_name" type="String" value="sea_water_potential_temperature"/>
+        <attribute name="grid" value="grid"/>
+        <attribute name="location" value="face"/>
+        <attribute name="content_coverage_type" value="modelResult"/>
     </variable>
     <variable name="salt">
         <attribute name="standard_name" type="String" value="sea_water_salinity"/>
         <attribute name="units" type="String" value="0.001"/>
         <attribute name="_FillValue" type="float" value="0.0"/>
+        <attribute name="grid" value="grid"/>
+        <attribute name="location" value="face"/>
+        <attribute name="content_coverage_type" value="modelResult"/>
     </variable>
     <variable name="Hwave">
         <attribute name="_FillValue" type="float" value="0.0"/>
         <attribute name="standard_name" type="String" value="sea_surface_wave_significant_height"/>
+        <attribute name="content_coverage_type" value="modelResult"/>
     </variable>
     <variable name="u">
         <attribute name="standard_name" type="String" value="x_sea_water_velocity"/>
         <attribute name="_FillValue" type="float" value="0.0"/>
         <attribute name="grid" value="grid"/>
         <attribute name="location" value="edge1"/>
+        <attribute name="content_coverage_type" value="modelResult"/>
     </variable>
     <variable name="v">
         <attribute name="standard_name" type="String" value="y_sea_water_velocity"/>
         <attribute name="_FillValue" type="float" value="0.0"/>
         <attribute name="grid" value="grid"/>
         <attribute name="location" value="edge2"/>
+        <attribute name="content_coverage_type" value="modelResult"/>
     </variable>
     <variable name="ubar">
         <attribute name="standard_name" type="String" value="barotropic_x_sea_water_velocity"/>
         <attribute name="_FillValue" type="float" value="0.0"/>
         <attribute name="grid" value="grid"/>
         <attribute name="location" value="edge1"/>
+        <attribute name="content_coverage_type" value="modelResult"/>
     </variable>
     <variable name="vbar">
         <attribute name="standard_name" type="String" value="barotropic_y_sea_water_velocity"/>
         <attribute name="_FillValue" type="float" value="0.0"/>
         <attribute name="grid" value="grid"/>
         <attribute name="location" value="edge2"/>
+        <attribute name="content_coverage_type" value="modelResult"/>
     </variable>
     <variable name="zeta">
         <attribute name="standard_name" type="String"
@@ -84,6 +96,7 @@
         <attribute name="_FillValue" type="float" value="0.0"/>
         <attribute name="grid" value="grid"/>
         <attribute name="location" value="face"/>
+        <attribute name="content_coverage_type" value="modelResult"/>
     </variable>
     <variable name="grid" type="int">
         <attribute name="cf_role" value="grid_topology"/>
