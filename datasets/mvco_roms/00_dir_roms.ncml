@@ -15,7 +15,7 @@
     <attribute name="keywords" type="String"
         value="Oceans; Ocean Temperature; Potential Temperature, Oceans; Salinity/Density; Salinity, Oceans; Sea Surface Topography; Sea Surface Height, Oceans; Ocean Circulation; Ocean Currents"/>
     <attribute name="keywords_vocabulary" type="String" value="GCMD Science Keywords"/>
-    <attribute name="standard_name_vocabulary" type="String" value="CF-1.6"/>
+    <attribute name="standard_name_vocabulary" type="String" value="CF Standard Name Table v27"/>
     <attribute name="comment" type="String"
         value="Model runs produced by Dr. Neil Ganju (nganju@usgs.gov)."/>
     <attribute name="creator_email" type="String" value="nganju@usgs.gov"/>
